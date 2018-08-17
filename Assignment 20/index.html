@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 20</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		/*Q1: I want this code to log out "hey amy", but it logs out "hey arnold" - why?
+		function greet (person) {
+			if (person == { name: 'amy' }) {
+				return 'hey amy'
+			} else {
+				return 'hey arnold'
+			}
+		}
+		greet({ name: 'amy' })*/
+
+		//Answer
+		function greet (person) {
+			if (person.name == { name: 'amy' }.name) {
+				 console.log('hey amy');
+			} else {
+				console.log('hey arnold');
+			}
+		}
+		greet({ name: 'amy' })
+
+		//Reason: As u can see the question in this question the parameter compares with object key and value.
+		//That's why it returns hey arnold then in the answer u can see we compare a object person whose key is
+		//name with {name : 'amy'}.name. 
+
+
+		 
+
+	</script>
+</body>
+</html>

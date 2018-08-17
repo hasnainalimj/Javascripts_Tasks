@@ -1,0 +1,66 @@
+var text = "Hello World";
+var secondText = "Hello Pakistan";
+var number = 24;
+var secondNumber = 24;
+
+i) text++?
+
+Ans: When we apply increment on any string value then. 
+     Result is : NaN.
+
+
+ii) number++?
+
+Ans: When we apply post increment on any integer value then 
+     Result is still : 24. 
+
+
+iii) ++number?
+
+Ans: When we apply pre increment on any interger value then.
+     Result is change : 25.
+
+
+iv) number++ + ++number * ++secondNumber?
+
+Ans: First is post increment so its 24 then second is pre increment 
+     so its 26 and 24+26 = 49, and then we using pre increment 
+     so its 25.
+     Result is: 674.
+
+
+v) number + text + secondNumber?
+
+Ans: Its concatenate. 
+     Result is 24Hello World24
+
+
+vi) number + text + secondNumber * number?
+
+Ans: Its concatenate the value when we using + between integer and 
+     string value. 
+     Result is: 24Hello World576. 
+
+
+vii) (number + "") + secondNumber?
+
+Ans: In quotes everything is string so 24 + "" = "24" and + 24. 
+     Result is: 2424.
+
+
+viii) (number + "") * secondNumber?
+
+Ans: In quotes everything is string so 24 + "" = "24" and * 24. 
+     Result is: 576. 
+
+
+ix) false * number?
+
+Ans: false is equals to 0 and when we multiply any value with 0 then.
+     Result is always: 0.
+
+
+x) true * secondNumber?
+
+Ans: true is equals to 1 and when we multiply 1 with 24. 
+     Result is: 24.

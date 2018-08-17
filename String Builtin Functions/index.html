@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Assignment 5</title>
+<style>
+.btn-questions{
+	width:200px;
+	height:50px;
+	border-radius:10px;
+	background-color:#0FF;
+	color:#000;
+	font-size:18px;
+	margin:30px;
+	cursor:pointer;
+	transition: background-color 1.5s ease;
+	}
+	
+.btn-questions:hover{
+	border-radius:20px;
+	background-color:#966;
+	color:#FFF;
+	}
+
+</style>
+
+<script>
+	
+	//Q1
+	function questionOne(){
+		var firstName = prompt("Enter Your First Name....");
+		var lastName = prompt("Enter Your Last Name....");
+		alert(firstName + " " + lastName);
+		}
+		
+		
+	//Q2
+	function questionTwo(){
+		var mobileModel = prompt("Enter Your Favorite Mobile....");
+		var length = mobileModel.length;
+		alert("My Favorite Mobile Is : ".concat(mobileModel).concat("\nLength Of String : ").concat(length));
+		}
+		
+	//Q3
+	function questionThree(){
+		var nationality = "Pakistani";
+		var result = nationality.indexOf("n");
+		alert("Text : " + nationality + "\nIndex Of 'n' is : ".concat(result));
+		}
+		
+	//Q4
+	function questionFour(){
+		var text = "Hello World";
+		var result = text.lastIndexOf("l");
+		alert("Text : " + text + "\nLast Index of 'l' is : " +result);
+		}
+		
+	//Q5
+	function questionFive(){
+		var nationality = "Pakistani";
+		var result = nationality.charAt(3);
+		alert("Text : " + nationality + "\nCharactor At Index 3 Is : ".concat(result));
+		}
+		
+	//Q6
+	function questionSix(){
+		var firstName = prompt("Enter Your First Name....");
+		var lastName = prompt("Enter Your Last Name....");
+		var fullName = firstName.concat(" ").concat(lastName);
+		alert(fullName);
+		}
+		
+	//Q7
+	function questionSeven(){
+		var cityName = "Hyderabad";
+		var dummy = cityName.slice(0,5);
+		var result = cityName.replace(dummy,"Islam");
+		alert("Before Replacment : " + cityName + "\nAfter Replacement : "+result);
+		alert();
+		}
+		
+	//Q8
+	function questionEight(){
+		var message = "Ali and Sami are best friends. They played cricket and football together";
+		var result = message.replace(/and/g,"&");
+		alert("Before Replacement : "+ message + "\nAfter Replacement : "+result);
+		alert();
+		}
+		
+	//Q9
+	function questionNine(){
+		var value = "420";
+		var stored = typeof(value);
+		var resultOne = parseInt(value);
+		var resultTwo = typeof(resultOne);
+		alert("Before Conversion Value is : '" + value + "'. Type is : " + stored + "\nAfter Conversion Value is : " + resultOne + ". Type is : " + resultTwo);
+		}
+		
+	//Q10
+	function questionTen(){
+		var urlAddress = prompt("Enter any URL in the Following Format : [www.facebook.com]");
+		var splitArr = urlAddress.split('.');
+		var arrLen = splitArr.length;
+		
+		if (arrLen > 2) {
+        	var urlAddress2 = splitArr[arrLen - 2] + '.' + splitArr[arrLen - 1];
+       		if (splitArr[arrLen - 1].length == 2 && splitArr[arrLen - 1].length == 2) {
+            	urlAddress2 = splitArr[arrLen - 3] + '.' + urlAddress;
+        		}
+    		}
+		alert("URL Address : "+urlAddress + "\nDomain : "+urlAddress2);
+		}
+		
+	//Q11
+	function questionEleven(){
+		var userInput = prompt("Enter whatever you want....");
+		var result = userInput.toUpperCase();
+		alert("Before Conversion : "+userInput + "\nAfter Conversion : "+result);
+		}
+		
+	//Q12
+	function questionTwelve(){
+		var userInput = prompt("Enter whatever you want....").toUpperCase();
+		var result = userInput.toLowerCase();
+		alert("Before Conversion : "+userInput + "\nAfter Conversion : "+result);
+		}
+		
+	//Q13
+	function questionThirteen(){
+		var userInput = prompt("Enter whatever you want....");
+		var stored = userInput.slice(1);
+		var stored_two = userInput[0].toUpperCase();
+		var result = stored_two.concat(stored);
+		alert("Before Conversion : "+userInput + "\nAfter Conversion : "+result);
+		}
+		
+	//Q14
+	function questionFourteen(){
+		var number = "35.36";
+		var result = number.replace('.',"");
+		alert("Before Conversion : "+number + "\nAfter Conversion : '"+result+"'");
+		}
+		
+	//Q15
+	function questionFifteen(){
+		var a = "3";
+		var b = "3";
+		var x = a + b;
+		if(a=="3" && b=="3"){
+			alert("a is : " + a + "\nb is : " + b + "\na + b is : " + x);
+			}
+		}
+		
+	//Q16
+	function questionSixteen(){
+		var a = 3;
+		var b = 3;
+		var x = a - b;
+		if(a=="3" && b=="3"){
+			alert("a is : " + a + "\nb is : " + b + "\na - b is : " + x);
+			}
+		}
+		
+	//Q17
+	function questionSeventeen(){
+		var userInput = prompt("Enter Your Name....");
+		
+		}
+		
+	//Q18
+	function questionEighteen(){
+		var yummyFruits = ['Apple','Mango','Banana','Orange','Strawberry','Watermellon','Cherry'];
+		var searchHere = prompt("Welcome to Fruit Shop. What do you want to order sir/ma'am....");
+		for(var i=0; i<yummyFruits.length; i++){
+			if(yummyFruits[i] == searchHere){
+				alert(yummyFruits[i] + " is available at index " + yummyFruits.indexOf(yummyFruits[i]) + " in our shop.");
+				}
+			}
+		}
+		
+	//Q19
+	function questionNineteen(){
+		var userInputOne = prompt("Enter Value One.....");
+		var userInputTwo = prompt("Enter Value Two.....");
+		if(userInputOne>userInputTwo){
+			alert(userInputOne + " is greater than " + userInputTwo)
+			}
+		else if(userInputTwo>userInputOne){
+			alert(userInputTwo + " is greater than " + userInputOne)
+			}
+		else{
+			alert(userInputOne + " and " + userInputTwo + " both are equal....");
+			}
+		}
+		
+	//Q20
+	function questionTwenty(){
+		var enterPassword = prompt("Enter Your Password.....(Format : )");
+		var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}$/;
+    	
+			if(enterPassword == regex){
+				alert("Password is Valid : " + enterPassword);
+				}
+			else{
+				alert("Password is Invalid : " + enterPassword);
+				}
+		}
+		
+	//Q21
+	function questionTwentyOne(){
+		var university = "University of Karachi";
+			function string_to_array(str){
+    			return str.split("");
+			};
+		alert("Before Convert in Array : " + university);	
+		alert("After Convert in Array : " + string_to_array(university));
+		}
+		
+	//Q22
+	function questionTwentyTwo(){
+		var userInput = prompt("Enter whatever you want....");
+		var result = userInput.charAt(userInput.length-1);
+		alert("Last Character of Input is : ".concat(result));
+		}
+		
+	//Q23
+	function questionTwentyThree(){
+		function count(main_str, sub_str) 
+    	{
+    		main_str += '';
+    		sub_str += '';
+
+   				if (sub_str.length <= 0) 
+    			{
+        			return main_str.length + 1;
+   				}
+				
+			subStr = sub_str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+       		return (main_str.match(new RegExp(subStr, 'gi')) || []).length;
+    	}
+			alert("The Quick Brown Fox Jumps Over The Lazy Dog.\nWord 'The' Repeats : " + count("The Quick Brown Fox Jumps Over The Lazy Dog.","The"));
+		}
+		
+	//Q24
+	function questionTwentyFour(){
+		var nationality = "Pakistani";
+		function vowel_count(str1)
+		{
+  			var vowel_list = 'aeiouAEIOU';
+  			var vcount = 0;
+  			for(var x = 0; x < str1.length ; x++)
+  			{
+    			if (vowel_list.indexOf(str1[x]) !== -1)
+    			{
+      				vcount += 1;
+    			}
+  
+  			}
+  			return vcount;
+			}
+		alert("No. Of Vowels In " + nationality + " is : " + vowel_count(nationality));
+		}
+		
+</script>
+	
+</head>
+
+<body>
+<button class="btn-questions" onClick="questionOne()">Question 1</button>
+<button class="btn-questions" onClick="questionTwo()">Question 2</button>
+<button class="btn-questions" onClick="questionThree()">Question 3</button>
+<button class="btn-questions" onClick="questionFour()">Question 4</button>
+<button class="btn-questions" onClick="questionFive()">Question 5</button>
+<button class="btn-questions" onClick="questionSix()">Question 6</button>
+<button class="btn-questions" onClick="questionSeven()">Question 7</button>
+<button class="btn-questions" onClick="questionEight()">Question 8</button>
+<button class="btn-questions" onClick="questionNine()">Question 9</button>
+<button class="btn-questions" onClick="questionTen()">Question 10</button>
+<button class="btn-questions" onClick="questionEleven()">Question 11</button>
+<button class="btn-questions" onClick="questionTwelve()">Question 12</button>
+<button class="btn-questions" onClick="questionThirteen()">Question 13</button>
+<button class="btn-questions" onClick="questionFourteen()">Question 14</button>
+<button class="btn-questions" onClick="questionFifteen()">Question 15</button>
+<button class="btn-questions" onClick="questionSixteen()">Question 16</button>
+<button class="btn-questions" onClick="questionSeventeen()">Question 17</button>
+<button class="btn-questions" onClick="questionEighteen()">Question 18</button>
+<button class="btn-questions" onClick="questionNineteen()">Question 19</button>
+<button class="btn-questions" onClick="questionTwenty()">Question 20</button>
+<button class="btn-questions" onClick="questionTwentyOne()">Question 21</button>
+<button class="btn-questions" onClick="questionTwentyTwo()">Question 22</button>
+<button class="btn-questions" onClick="questionTwentyThree()">Question 23</button>
+<button class="btn-questions" onClick="questionTwentyFour()">Question 24</button>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 16 Task 4</title>
+</head>
+<style type="text/css">
+	.container{
+		width: 250px;
+		height: 250px;
+		border: 2px solid #000;
+		border-radius: 10px;
+		margin-top: 10%;
+	}
+
+	.fields{
+		width: 220px;
+		height: 30px;
+		border-radius: 5px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+
+	.btnLogin{
+		width: 120px;
+		height: 30px;
+		border-radius: 5px;
+		font-weight: bold;
+		font-size: 18px;
+		cursor: pointer;
+	}
+	.hiddenText{
+		font-size: 50px;
+		margin-top: 60px;
+	}
+</style>
+<body>
+	<center>
+		<div class="container">
+			<h1>LOGIN</h1>
+			<input type="email" id="txtEmail" class="fields" placeholder="Enter Your Email.....">
+			<br>
+			<br>
+			<input type="password" id="txtPassword" class="fields" placeholder="Enter Your Password">
+			<br>
+			<br>
+			<input type="button" class="btnLogin" value="Login" onclick="taskFour()">
+		</div>
+		<h1 class="hiddenText" id="welcomeText">
+		</h1>
+	</center>
+	
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

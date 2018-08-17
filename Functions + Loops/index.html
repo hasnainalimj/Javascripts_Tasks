@@ -1,0 +1,236 @@
+<html>
+	<head>
+    	<title>ASSIGNMENT 4</title>
+        
+        <script>
+		
+		//Q1
+		function questionOne(){
+			var students = ['Hasnain Ali','Hafiz Khalil','Rana Zubair'];
+			var scores = [480,370,420];
+			document.write("Score Of " + students[0] + " is " + scores[0] + ". Percentage is " + (scores[0]/500)*100 + "%.");
+			document.write("<br>Score Of " + students[1] + " is " + scores[1] + ". Percentage is " + (scores[1]/500)*100 + "%.");
+			document.write("<br>Score Of " + students[2] + " is " + scores[2] + ". Percentage is " + (scores[2]/500)*100 + "%.");
+			}
+		
+		//Q2A
+		function questionTwoA(){
+			var colors = ['Red','Green','Blue','White','Black'];
+			document.write("Default Array : " + colors);
+			colors.unshift('Golden');
+			document.write("<br>Adding Value From Beginning : " + colors);
+			}
+		
+		//Q2B
+		function questionTwoB(){
+			var colors = ['Red','Green','Blue','White','Black'];
+			document.write("Default Array : " + colors);
+			colors.push('Pink');
+			document.write("<br>Adding Value From End : " + colors);
+			}
+		
+		//Q2C
+		function questionTwoC(){
+			var colors = ['Red','Green','Blue','White','Black'];
+			document.write("Default Array : " + colors);
+			colors.unshift('Cyan','Grey');
+			document.write("<br>Adding Two Values From Beginning : " + colors);
+			}
+		
+		//Q2D
+		function questionTwoD(){
+			var colors = ['Red','Green','Blue','White','Black'];
+			document.write("Default Array : " + colors);
+			colors.shift();
+			document.write("<br>Deleing Value From Beginning : " + colors);
+			}
+		
+		//Q2E
+		function questionTwoE(){
+			var colors = ['Red','Green','Blue','White','Black'];
+			document.write("Default Array : " + colors);
+			colors.pop();
+			document.write("<br>Deleing Value From End : " + colors);
+			}
+		
+		//Q2F
+		function questionTwoF(){
+			var colors = ['Red','Green','Blue','White','Black'];
+			document.write("Default Array : " + colors);
+			colors.splice(2,0,'Orange','Purple');
+			document.write("<br>Adding Multiple Values Via Index : " + colors);
+			}
+		
+		//Q2G
+		function questionTwoG(){
+			var colors = ['Red','Green','Blue','White','Black'];
+			document.write("Default Array : " + colors);
+			colors.splice(0,2,'Skyblue','Hotpink');
+			document.write("<br>Deleting Multiple Values Via Index : " + colors);
+			}
+		
+		//Q3
+		function questionThree(){
+			var number = 0;
+			for(var i=1; i<=100; i++)
+			{
+			 number=number+i;
+ 			}
+			document.write("Sum of 100 Natural Numbers are : " + number);	
+			}
+		
+		//Q4
+		function questionFour(){
+			var j,i,number;
+   			number = prompt("Enter Number....");
+   			document.write("Multiplication table from 1 to " + number);
+   			for(i=1;i<=10;i++)
+   			{
+     			for(j=1;j<=number;j++)
+     			{
+       				if (j<=number)
+           				document.write("<br>" + i + " X " + j + " = " + i*j);
+          			else
+	    				document.write("<br> " + j + " X " + i + " = " + i*j);
+				}
+     			document.write("<br>");
+   			}
+			}
+		
+		//Q5A
+		function questionFiveA(){
+			for(var i=1; i<=15; i++){
+				document.write(" "+i);
+				}
+			}
+		
+		//Q5B
+		function questionFiveB(){
+			for(var i=10; i>0; i--){
+				document.write(" "+i);
+				}
+			}
+		
+		//Q5C
+		function questionFiveC(){
+			for(var i=0; i<=100; i+=2){
+				document.write(" "+i);
+				}
+			}
+		
+		//Q5D
+		function questionFiveD(){
+			for(var i=1; i<=100; i+=2){
+				document.write(" "+i);
+				}
+			}
+		
+		//Q5E
+		function questionFiveE(){
+			for(var i=0; i<=20; i+=2){
+				document.write(" "+i+"k");
+				}
+			}
+		
+		//Q6
+		function questionSix(){
+			var numbers = [12,25,48,77,47,11,7,88];
+			var max = 0;
+			var min = 0;
+			for(var i=0; i<numbers.length; i++){
+				if(max<numbers[i]){
+					max=numbers[i];
+				}
+				else if(max>numbers[i]){
+					min=numbers[i];
+				}
+			}
+			alert("Please note the Maximum and Minimum Values : "+numbers)
+			alert("Maximum is : " + max + " & Minimum is : " + min);
+			}
+		
+		//Q7A
+		function questionSevenA(){
+			for(var i=0; i<=5; i++){
+				document.write("*");
+				for(var j=0; j<=5; j++){
+					document.write("*");
+					}
+					document.write("<br>");
+				}
+			}
+		
+		//Q7B
+		function questionSevenB(){
+			for(var i=0; i<=5; i++){
+				document.write("*");
+				for(var j=1; j<=i; j++){
+					document.write("*");
+					}
+					document.write("<br>");
+				}
+			}
+		
+		//Q7C
+		function questionSevenC(){
+			for(i=5; i>=1; i--){
+				for(j=1; j<=i; j++){
+					document.write("*");
+					}
+					document.write("<br>");
+				}
+			}
+
+        </script>
+        
+        <style>
+			h1{
+				text-align:center;
+				text-decoration:underline;
+				margin-top:100px;
+				}
+				
+			.questions{
+				width:20%;
+				height:5%;
+				font-size:20px;
+				margin:15px;
+				cursor:pointer;
+				}
+				
+			.questions:hover{
+				background-color:#333;
+				color:#FFF;
+				font-weight:bold;
+				border-radius:10px;
+				}
+		</style>
+    </head>
+    
+    <body>
+    	
+        <h1>ASSIGNMENT 4</h1>
+    
+    	<center>
+    		<button class="questions" onClick="questionOne();">Question 1</button>
+        	<button class="questions" onClick="questionTwoA();">Question 2A</button>
+        	<button class="questions" onClick="questionTwoB();">Question 2B</button>
+        	<button class="questions" onClick="questionTwoC();">Question 2C</button>
+        	<button class="questions" onClick="questionTwoD();">Question 2D</button>
+        	<button class="questions" onClick="questionTwoE();">Question 2E</button>
+        	<button class="questions" onClick="questionTwoF();">Question 2F</button>
+        	<button class="questions" onClick="questionTwoG();">Question 2G</button>
+            <button class="questions" onClick="questionThree();">Question 3</button>
+            <button class="questions" onClick="questionFour();">Question 4</button>
+            <button class="questions" onClick="questionFiveA();">Question 5A</button>
+            <button class="questions" onClick="questionFiveB();">Question 5B</button>
+            <button class="questions" onClick="questionFiveC();">Question 5C</button>
+        	<button class="questions" onClick="questionFiveD();">Question 5D</button>
+        	<button class="questions" onClick="questionFiveE();">Question 5E</button>
+        	<button class="questions" onClick="questionSix();">Question 6</button>
+        	<button class="questions" onClick="questionSevenA();">Question 7A</button>
+        	<button class="questions" onClick="questionSevenB();">Question 7B</button>
+        	<button class="questions" onClick="questionSevenC();">Question 7C</button>
+        </center>
+    </body>
+</html>

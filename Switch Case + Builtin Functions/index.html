@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 7</title>
+
+	<script type="text/javascript">
+		
+		var date = new Date();
+
+		//Q1
+		function questionOne() {
+			alert(date);
+		}
+
+		//Q2
+		function questionTwo() {
+			var monthNumber = prompt("Enter Month In Numeric.....");
+			switch(monthNumber){
+				case "1":alert("January")
+				break;
+				case "2":alert("February")
+				break;
+				case "3":alert("March")
+				break;
+				case "4":alert("Aprail")
+				break;
+				case "5":alert("May")
+				break;
+				case "6":alert("June")
+				break;
+				case "7":alert("July")
+				break;
+				case "8":alert("August")
+				break;
+				case "9":alert("September")
+				break;
+				case "10":alert("October")
+				break;
+				case "11":alert("November")
+				break;
+				case "12":alert("December")
+				break;
+
+			}
+			
+		}
+
+		//Q3
+		function questionThree() {
+
+		}
+
+		//Q4
+		function questionFour() {
+			
+		}
+
+		//Q5
+		function questionFive() {
+			var userInput = +prompt("Enter Your Age.....");
+			var years = date.getFullYear();
+			var result = years - userInput;
+			alert("Your Birth Year Is : " + result);
+
+		}
+
+		//Q6
+
+		function cal(val1,val2,op){
+			
+			if(op=="+"){
+				return alert("Addition is : " + (val1+val2));
+			}
+			else if(op=="-"){
+				return alert("Subtration is : " + (val1-val2));
+			}
+			else if(op=="*"){
+				return alert("Multiplication is : " + (val1*val2));
+			}
+			else if(op=="/"){
+				return alert("Division is : " + (val1/val2));
+			}
+			else{
+				return alert("Error");
+			}
+		}
+
+		function questionSix() {
+			var value1 = +prompt("Enter Value One.....");
+			var value2 = +prompt("Enter Value Two.....");
+			var operator = prompt("Enter operator");
+
+			cal(value1,value2,operator);
+		}
+
+
+		//Q7
+		function questionSeven() {
+			
+		}
+
+		//Q8
+		function check_Palindrome(str_entry){
+
+   			var cstr = str_entry.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+			var ccount = 0;
+
+			if(cstr==="") {
+				alert("Nothing found!");
+				return false;
+			}
+			if ((cstr.length) % 2 === 0) {
+				ccount = (cstr.length) / 2;
+			} else {
+				if (cstr.length === 1) {
+					alert("Entry is a palindrome.");
+					return true;
+				} else {
+					ccount = (cstr.length - 1) / 2;
+					}
+				}
+			for (var x = 0; x < ccount; x++) {
+				if (cstr[x] != cstr.slice(-1-x)[0]) {
+					alert("Entry is not a palindrome.");
+					return false;
+				}
+			}
+			alert("The entry is a palindrome.");
+			return true;
+		}
+
+		function questionEight() {
+			var stringInput = prompt("Enter Anything.....");
+			check_Palindrome(stringInput);
+		}
+
+		//Q9
+		function checkingType(inp){
+			alert("Type Of Input Value Is : " + typeof(inp));
+		}
+
+		function questionNine() {
+			var user = prompt("Enter Anything.....");
+			checkingType(user);
+		}
+
+		//Q10
+		//Function for Delay
+		function sleepFor( sleepDuration ){
+			var now = new Date().getTime();
+			while(new Date().getTime() < now + sleepDuration);
+		}		
+		
+		var total_runs_for_team_A;
+		
+		function inning(teamName){
+			total_runs_for_team_A = 0;
+			var store_runs = 0;
+			var runs = 0;
+			var wickets = 0;
+			var team1Score = 0;
+			var team2Score = 0;
+			var team3Score = 0;
+			var team4Score = 0;
+			var team5Score = 0;
+			var team6Score = 0;
+			var team7Score = 0;
+			var team8Score = 0;
+			var team9Score = 0;
+			var team10Score = 0;
+
+			console.log(" ");
+			console.log("\n-----------" + "Team : " + teamName + " Batting-----------");
+			sleepFor(2000);
+
+			for(var balls=1; balls<=6; balls++){
+		
+				store_runs = Math.random() * 7;
+				runs = Math.floor(store_runs);
+		
+				if(runs == 0){
+					console.log("\nOoooh It's Out.....");
+					wickets++;
+					sleepFor(1000);
+				}
+		
+				else if(runs == 6){
+					console.log("\nIt's Going For The Maximum Out Of The Park 6 Runs");
+					total_runs_for_team_A+= runs;
+					sleepFor(1000);
+				}
+			
+				else if(runs == 5){
+					console.log("\nOooohhhh! Wide And 4 Bonus 5 Runs");
+					total_runs_for_team_A+= runs;
+					sleepFor(1000);
+				}
+			
+				else if(runs == 4){
+					console.log("\nWhat A Beautiful Cover Drive For 4");
+					total_runs_for_team_A+= runs;
+					sleepFor(1000);
+				}
+			
+				else if(runs == 3){
+					console.log("\nGood Running Between The Wickets Takes 3 Runs");
+					total_runs_for_team_A+= runs;
+					sleepFor(1000);
+				}
+			
+				else if(runs == 2){
+					console.log("\nNice Shot 2 More Runs Added On The Score Board");
+					total_runs_for_team_A+= runs;
+					sleepFor(1000);
+				}
+		
+				else{
+					console.log("\nStay With A Singal Run");
+					total_runs_for_team_A+= runs;
+					sleepFor(1000);
+				}
+			}
+			sleepFor(1000);
+			console.log("\n-----------" + " Over : Ended " + "-----------");
+			console.log("----------------------------------------------------------");
+			sleepFor(2000);
+			console.log("\nAt The End Of The Over Score Is : " + teamName + " : " + total_runs_for_team_A + " - " + wickets);
+			console.log("");
+
+		}
+		
+
+		function questionTen(){
+			alert("Let's see who score most runs in 1 over.");
+			var team1 = prompt("Enter First Team Name.....");
+			var team2 = prompt("Enter Second Team Name.....");
+			var team3 = prompt("Enter Third Team Name.....");
+			var team4 = prompt("Enter Fourth Team Name.....");
+			var team5 = prompt("Enter Fifth Team Name.....");
+			var team6 = prompt("Enter Sixth Team Name.....");
+			var team7 = prompt("Enter Seventh Team Name.....");
+			var team8 = prompt("Enter Eighth Team Name.....");
+			var team9 = prompt("Enter Nineth Team Name.....");
+			var team10 = prompt("Enter Tenth Team Name.....");
+			inning(team1);
+			team1Score = total_runs_for_team_A;
+			inning(team2);
+			team2Score = total_runs_for_team_A;
+			inning(team3);
+			team3Score = total_runs_for_team_A;
+			inning(team4);
+			team4Score = total_runs_for_team_A;
+			inning(team5);
+			team5Score = total_runs_for_team_A;
+			inning(team6);
+			team6Score = total_runs_for_team_A;
+			inning(team7);
+			team7Score = total_runs_for_team_A;
+			inning(team8);
+			team8Score = total_runs_for_team_A;
+			inning(team9);
+			team9Score = total_runs_for_team_A;
+			inning(team10);
+			team10Score = total_runs_for_team_A;
+			sleepFor(1000);
+			console.log("\n--------------Waiting--------------");
+			sleepFor(2000);
+			console.log(" ")
+			console.log("\n-----------And the Winner is-----------");
+			sleepFor(1000);
+			console.log("\nScore of : " + team1 + " is : " + team1Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team2 + " is : " + team2Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team3 + " is : " + team3Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team4 + " is : " + team4Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team5 + " is : " + team5Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team6 + " is : " + team6Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team7 + " is : " + team7Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team8 + " is : " + team8Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team9 + " is : " + team9Score);
+			sleepFor(500);
+			console.log("\nScore of : " + team10 + " is : " + team10Score);
+			sleepFor(2000);
+			var finalResult = Math.max(team1Score,team2Score,team3Score,team4Score,team5Score,team6Score,team7Score,team8Score,team9Score,team10Score);
+			console.log("\nMost Runs in Over : " + finalResult);
+			
+		}
+
+	</script>
+
+	<style type="text/css">
+		.btn-all{
+			width: 200px;
+			height: 70px;
+			border-radius: 10px;
+			background-color: black;
+			color: white;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+			cursor: pointer;
+			margin: 23px;
+		}
+	</style>
+
+</head>
+<body>
+	<button class="btn-all" onClick="questionOne()">QUESTION 1</button>
+	<button class="btn-all" onClick="questionTwo()">QUESTION 2</button>
+	<button class="btn-all" onClick="questionThree()">QUESTION 3</button>
+	<button class="btn-all" onClick="questionFour()">QUESTION 4</button>
+	<button class="btn-all" onClick="questionFive()">QUESTION 5</button>
+	<button class="btn-all" onClick="questionSix()">QUESTION 6</button>
+	<button class="btn-all" onClick="questionSeven()">QUESTION 7</button>
+	<button class="btn-all" onClick="questionEight()">QUESTION 8</button>
+	<button class="btn-all" onClick="questionNine()">QUESTION 9</button>
+	<button class="btn-all" onClick="questionTen()">QUESTION 10</button>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<html>
+    <head>
+        <title></title>
+        <script>
+			
+			//Q1		
+			function isPalindrome(str) {
+  				var len = Math.floor(str.length / 2);
+  				for (var i = 0; i < len; i++)
+    			if (str[i] !== str[str.length - i - 1]){
+					return alert("Not Palindrome");
+					}
+  			return alert("Yes Its Palindrome");
+			}
+
+			function questionOne(){
+				var input2 = prompt("Enter Anything.....");
+				isPalindrome(input2);
+			}
+
+			//Q2
+			function returnTypeOf(text){
+				var result = typeof(text);
+				return alert("Type of given value is : " +result);
+			}
+
+			function questionTwo(){
+				returnTypeOf("Hello");
+				returnTypeOf(1);
+				returnTypeOf(true);
+			}
+
+			//Q3
+			function questionThree(){
+				var array = ['a', 'b', 'q', 'p', 'a', 'l', 'p', 'a', 'k', 'w', 'x', 'z'];
+
+				for(var i=0; i<array.length; i++){
+					if(array[i] == "p" && array[i+1] == "a" && array[i+2]){
+						alert("pak is found in array");
+						break;
+					}
+			 	}
+			}
+
+			//Q4
+			function weekDays(inp){
+				switch (inp){
+					case 1:
+					alert("Monday");
+					break;
+					case 2:
+					alert("Tuesday");
+					break;
+					case 3:
+					alert("Wednesday");
+					break;
+					case 4:
+					alert("Thursday");
+					break;
+					case 5:
+					alert("Friday");
+					break;
+					case 6:
+					alert("Saturday");
+					break;
+					case 7:
+					alert("Sunday");
+					break;
+					default:
+					alert("Not a valid day.....");
+				}
+			}
+
+			function questionFour(){
+					var enterDay = +prompt("Enter the days of the week in number.....");
+					weekDays(enterDay);
+			}
+
+			//Q5
+
+			function getMonths(month){
+				switch(month){
+					case 1:
+					alert("January");
+					break;
+					case 2:
+					alert("Februry");
+					break;
+					case 3:
+					alert("March");
+					break;
+					case 4:
+					alert("Aprail");
+					break;
+					case 5:
+					alert("May");
+					break;
+					case 6:
+					alert("June");
+					break;
+					case 7:
+					alert("July");
+					break;
+					case 8:
+					alert("August");
+					break;
+					case 9:
+					alert("September");
+					break;
+					case 10:
+					alert("October");
+					break;
+					case 11:
+					alert("November");
+					break;
+					case 12:
+					alert("December");
+					break;
+					default:
+					alert("Invalid Input.....");
+
+				}
+			}
+
+			function questionFive(){
+				var inputMonth = +prompt("Enter Month Number.....");
+				getMonths(inputMonth);
+			}
+
+			//Q6
+
+			function is_date(input) {
+  				if ( Object.prototype.toString.call(input) === "[object Date]" ) 
+    			{return true;}
+  				else
+  				{return false;}  
+    		}
+
+			function questionSix(){
+				var ansOne = is_date("October 13, 2014 11:13:00");
+				var ansTwo = is_date(new Date(86400000));
+				var ansThree = is_date(new Date(99,5,24,11,33,30,0));
+				var ansFour = is_date([1, 2, 4, 0]);
+
+				alert("October 13, 2014 11:13:00 is : " + ansOne);
+				alert("new Date(86400000) is : " + ansTwo);
+				alert("new Date(99,5,24,11,33,30,0) is : " + ansThree);
+				alert("[1, 2, 4, 0]s is : " + ansFour);
+			}
+
+			//Q7
+			var myNewDate = new Date("February 3, 2001");  
+			
+			function questionSeven(){
+				var seperator = prompt("Enter Date Seperator.....");
+				if(seperator=="/"){
+					alert((myNewDate.getMonth() + 1) + "/" + myNewDate.getDate() + "/" + myNewDate.getFullYear());
+				}
+				else if(seperator=="-"){
+					alert((myNewDate.getMonth() + 1) + "-" + myNewDate.getDate() + "-" + myNewDate.getFullYear());
+				}
+				else{
+					alert("Please Enter Only '/' & '-' Seperator.....");
+				}
+			}
+
+			//Q8
+			function timeConvert(n){
+				var num = n;
+				var hours = (num / 60);
+				var rhours = Math.floor(hours);
+				var minutes = (hours - rhours) * 60;
+				var rminutes = Math.round(minutes);
+				return alert(num + " minutes = " + rhours + " hour(s) and " + rminutes + " minute(s).");
+			}		
+
+			function questionEight(){
+				var inputTime = +prompt("Enter time in seconds.....");
+				timeConvert(inputTime);
+			}	
+
+			//Q9
+			function diff_minutes(dt2, dt1){
+				var diff =(dt2.getTime() - dt1.getTime()) / 1000;
+  				diff /= 60;
+  				return Math.abs(Math.round(diff));
+  			}
+
+			function questionNine(){
+				var dt1 , dt2;
+				dt1 = new Date("October 13, 2014 11:11:00"); 
+				dt2 = new Date("October 13, 2014 11:13:00"); 
+				alert(diff_minutes(dt1, dt2));
+
+			}
+
+			//Q10
+
+			function fullDate(y,mo,d,h,m,s,ms){
+				d =  new Date();
+				var year = d.setFullYear(y);
+				var month = d.setMonth(mo);
+				var date = d.setDate(d);
+				var hour = d.setHours(h);
+				var minutes = d.setMinutes(m);
+				var seconds = d.setSeconds(s);
+				var milisecs = d.setMiliseconds(ms);
+				
+				alert(year + "/" + month + "/" + date + " : " + hour + ":" + minutes + ":" + seconds + ":" + milisecs);
+			}
+
+			function questionTen(){
+				
+			}
+			
+
+        </script>
+
+        
+        	<style type="text/css">
+				.btn-all{
+					width: 200px;
+					height: 70px;
+					border-radius: 10px;
+					background-color: black;
+					color: white;
+					text-align: center;
+					font-size: 20px;
+					font-weight: bold;
+					cursor: pointer;
+					margin: 23px;
+					}
+		</style>
+
+    </head>
+    <body>
+    	<button class="btn-all" onClick="questionOne()">QUESTION 1</button>
+		<button class="btn-all" onClick="questionTwo()">QUESTION 2</button>
+		<button class="btn-all" onClick="questionThree()">QUESTION 3</button>
+		<button class="btn-all" onClick="questionFour()">QUESTION 4</button>
+		<button class="btn-all" onClick="questionFive()">QUESTION 5</button>
+		<button class="btn-all" onClick="questionSix()">QUESTION 6</button>
+		<button class="btn-all" onClick="questionSeven()">QUESTION 7</button>
+		<button class="btn-all" onClick="questionEight()">QUESTION 8</button>
+		<button class="btn-all" onClick="questionNine()">QUESTION 9</button>
+		<button class="btn-all" onClick="questionTen()">QUESTION 10</button>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+Question 1: Is 'false' is false?
+
+Ans: In quotes every value becomes in string so its True.
+
+
+Question 2: Is ' ' is false?
+
+Ans: Its True because in single quotes space is behave like string so its True.
+
+
+Question 3: What about {}?
+
+Ans: Its return object datatype so its true. It is called parenthesis.
+
+
+Question 4: Tell me about []?
+
+Ans: Its also return object datatypes so its also true. It is called square brackets.
+
+
+Question 5: You talked about '' to be falsy. What about new String('')?
+
+Ans: When a value returns an object its always true so its return an object so its True.
+
+
+Question 6: Tell me about new Boolean(false)
+
+Ans: When we give Boolean(false) then its False.
+
+
+Question 7: Boolean(function(){})
+
+Ans: Function always return some value no matter what kind of value so its True.
+
+
+Question 8: Boolean(/foo/)
+
+Ans: True Because it contains some charectors.
+
+
+Question 9: true%1
+
+Ans: When we have true then it means 1 and 1%1=0, and 0 is always false so its False.
+
+
+Question 10: '' % 1
+
+Ans: '' means false and false = 0 and 0%1=0, so its False.

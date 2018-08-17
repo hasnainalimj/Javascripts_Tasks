@@ -1,0 +1,478 @@
+<html>
+    <head>
+        <title>JS Test</title>
+        <script>
+            
+            //Q1
+            function questionOne(){
+			var myName = prompt("Enter Your Name....");
+            alert("Hi,"+myName);
+			}
+			
+			//Q2
+			function questionTwo(){
+				var table = prompt("Enter Number....");
+				if(table>0){
+					for(var i=1; i<=10; i++){
+					document.writeln("<br>" + table + " X " + i + " = " + table*i);
+						}
+					}
+					else{
+						for(var j=1; j<=10; j++){
+						document.writeln("<br>" + 5 + " X " + j + " = " + 5*j);
+						}
+				
+					}
+				}
+
+            //Q3
+			function questionThree(){
+            var cityName = prompt("Enter City Name....");
+            if(cityName=="Karachi"){
+                alert("Welcome to city of Lights");
+            }
+            else{
+                alert("Invalid Input!")
+            }
+			}
+            
+            //Q4
+			function questionFour(){
+            var myGender = prompt("Enter Your Gender....");
+            if(myGender=="Male"){
+                alert("Welcome Sir!");
+            }
+            else if(myGender=="Female"){
+                alert("Welcome Madam");
+            }
+            else{
+                alert("Invalid Input");
+            }
+			}
+
+            //Q5
+			function questionFive(){
+            var signalColor = prompt("Enter Signal Lights Color");
+            if(signalColor=="Red"){
+                alert("Vehicles must Stop!");
+            }
+            else if(signalColor=="Yellow"){
+                alert("vehicles should get ready to move");
+            }
+            else if(signalColor=="Green"){
+                alert("vehicles can move now");
+            }
+            else{
+                alert("Invalid Input!");
+            }
+			}
+
+            //Q6
+			function questionSix(){
+            alert("Maximum Age is : 50");
+            var maxAge = 50;
+            var currentAge = prompt("Enter Current Age....");
+            
+            if(currentAge<=50){
+                alert("Welcome Sir!");
+            }
+            else{
+                alert("Sorry out of Age");
+            }
+			}
+
+            //Q7
+			function questionSeven(){
+            var fuelLimit = 0.25;
+            var myFuel = prompt("Enter Your Fuel Value....");
+            if(myFuel<=fuelLimit){
+                alert("Please refill the fuel in your car");
+            }
+            else{
+                alert("Move on..........");
+            }
+			}
+			
+			//Q8
+			
+			function questionEightA(){
+				//A
+				var a = 4;
+				if (++a === 5){
+				alert("given condition for variable a is true");
+				}
+			}
+			
+			function questionEightB(){
+				//B
+				var b = 82;
+				if (b++ === 83){
+				alert("given condition for variable b is true");
+				}
+			}
+			
+			function questionEightC(){
+				//C
+				var c = 12;
+				if (c++ === 13){
+				alert("condition 1 is true");
+				}
+				if (c === 13){
+				alert("condition 2 is true");
+				}
+				if (++c < 14){
+				alert("condition 3 is true");
+				}
+				if(c === 14){
+				alert("condition 4 is true");
+				}
+			}
+			
+			function questionEightD(){
+				//D
+				var materialCost = 20000;
+				var laborCost = 2000;
+				var totalCost = materialCost + laborCost;
+				if (totalCost === laborCost + materialCost){
+				alert("The cost equals");
+				}
+			}
+			
+			function questionEightE(){
+				//E
+				if (true){
+				alert("True");
+				}
+				if (false){
+				alert("False");
+				}
+			}
+			
+			function questionEightF(){
+				//F
+				if("car" < "cat"){
+				alert("car is smaller than cat");
+				}
+			}
+			
+            //Q9
+			function questionNine(){
+            var maths = prompt("Enter Maths Marks....");
+            var english = prompt("Enter English Marks....");
+            var urdu = prompt("Enter Urdu Marks....");
+            var totalMarks = 300;
+            alert("Total Marks : "+totalMarks);
+            var obtainedMarks = parseInt(maths) + parseInt(english) + parseInt(urdu);
+            alert("Obtained Marks : "+obtainedMarks);
+            var percentage = (obtainedMarks/totalMarks)*100;
+            alert("Percentage is : "+percentage);
+            if(percentage>=80){
+                alert("Grade A-One");
+            }
+            else if(percentage>=70){
+                alert("Grade A");
+            }
+            else if(percentage>=60){
+                alert("Grade B");
+            }
+            else{
+                alert("Failed");
+            }
+			}
+			
+			//Q10
+			function questionTen(){
+				alert("Shop Here....")
+				
+				var item_1 = prompt("Enter Item One Name....");
+				var item_1_Quantity = parseInt(prompt("Enter Item One Quantity...."));
+				var item_1_Price = parseInt(prompt("Enter Item One Price"));
+				var item_1_Total_Price = item_1_Quantity * item_1_Price;
+								
+				var item_2 = prompt("Enter Item Two Name....");
+				var item_2_Quantity = parseInt(prompt("Enter Item Two Quantity...."));
+				var item_2_Price = parseInt(prompt("Enter Item Two Price"));
+				var item_2_Total_Price = item_2_Quantity * item_2_Price;
+				
+				var shippingCharges = 250;
+				var total_Cost_Of_Your_Order = item_1_Total_Price + item_2_Total_Price + shippingCharges;
+				
+				document.writeln("<br>" + "Item One Name : "+item_1);
+				document.writeln("<br>" + "Item One Quantity : "+item_1_Quantity);
+				document.writeln("<br>" + "Item One Per Price : "+item_1_Price);
+				document.writeln("<br>" + "Item One Total Price : "+item_1_Total_Price);
+				
+				document.writeln("<br>" + "Item Two Name : "+item_2);
+				document.writeln("<br>" + "Item Two Quantity : "+item_2_Quantity);
+				document.writeln("<br>" + "Item Two Per Price : "+item_2_Price);
+				document.writeln("<br>" + "Item Two Total Price : "+item_2_Total_Price);
+				
+				document.writeln("<br>" + "Shipping Charges : "+shippingCharges);
+				
+				if(total_Cost_Of_Your_Order>2000){
+					document.writeln("<br>" + "Total Cost Of Order : "+total_Cost_Of_Your_Order);
+					document.writeln("<br>" + "After 10% Discount : "+(total_Cost_Of_Your_Order/10));
+					}
+					else{
+						document.writeln("<br>" + "Total Cost Of Order : "+total_Cost_Of_Your_Order);
+						}
+				}
+			
+			//Q11
+            function questionEleven(){
+				alert("Lets Play...........");
+           		var secretNumber = 101;
+            	var inputNum = prompt("Enter Your Number....");
+
+	            if(inputNum==secretNumber){
+    	            alert("Bingo!");
+        	    }
+            	else{
+                	alert("Close Enough");
+            	}
+			}
+			
+			//Q12
+			function questionTwelve(){
+				var numDivisible = prompt("Enter Number....");
+				if(numDivisible%3==0){
+					alert("Divided By 3");
+					}
+					else{
+						alert("Not Divided By 3");
+						}
+				}
+				
+            //Q13
+			function questionThirteen(){
+            var teamPakistan = prompt("Enter Team Pakistan Score....");
+            var teamIndia = prompt("Enter Team India Score....");
+            if(teamPakistan>=teamIndia){
+                alert("Team Pakistan Won....");
+            }
+            else if(teamIndia>=teamPakistan){
+                alert("Team India Won....");
+            }
+            else if(teamPakistan=teamIndia){
+                alert("Match Tied");
+            }
+            else{
+                alert("Invalid Input");
+            }
+			}
+
+            //Q14
+			function questionFourteen(){
+				var text = "Hasnain Ali";
+				var number = 101;
+				var bools = true;
+				alert("Text variable is : "+typeof(text));
+				alert("Number variable is : "+typeof(number));
+				alert("Bools variable is : "+typeof(bools));
+				}
+	
+            //Q15
+			function questionFifteen(){
+            var takeInput = prompt("Enter Number....");
+            if(takeInput%2==0){
+                alert("Even Number");
+            }
+            else {
+                alert("Odd Number");
+            }
+			}
+
+            //Q16
+			function questionSixteen(){
+            var cityTemp = prompt("Enter Temperature....");
+            if(cityTemp>40){
+                alert("It is too hot outside.");
+            }
+            else if(cityTemp>30){
+                alert("The Weather today is Normal.");
+            }
+            else if(cityTemp>20){
+                alert("Today’s Weather is cool.");
+            }
+            else if(cityTemp>10){
+                alert("OMG! Today’s weather is so Cool.");
+            }
+            else{
+                alert("Invalid Input!");
+            }
+			}
+
+			//Q17
+			function questionSeventeen(){
+				var valueOne = parseInt(prompt("Enter Number One...."));
+				var valueTwo = parseInt(prompt("Enter Number Two...."));
+				var operator = prompt("Enter Operator....");
+				if(operator == "+"){
+					alert(valueOne + " " + operator + " " + valueTwo + " = " + (valueOne+valueTwo));
+					}
+				
+				else if(operator == "-"){
+					alert(valueOne + " " + operator + " " + valueTwo + " = " + (valueOne-valueTwo));
+					}
+				
+				else if(operator == "*"){
+					alert(valueOne + " " + operator + " " + valueTwo + " = " + (valueOne*valueTwo));
+					}
+				
+				else if(operator == "/"){
+					alert(valueOne + " " + operator + " " + valueTwo + " = " + (valueOne/valueTwo));
+					}
+				else{
+					alert("Invalid Inputs!");
+				}
+			}
+
+            //Q18
+			function questionEighteen(){
+            var weekDays = prompt("Enter Day Name....");
+            if(weekDays=="Monday" || weekDays=="Tuesday" || weekDays=="Wednesday" || weekDays=="Thursday" || weekDays=="Friday"){
+                alert("It’s a week day");
+            }
+            else if(weekDays=="Saturday"){
+                alert("It’s weekend");
+            }
+            else if(weekDays=="Sunday"){
+                alert("Yay! It’s a holiday");
+            }
+            else{
+                alert("Invalid Input!");
+            }
+			}
+			
+			//Q19
+			function questionNineteen(){
+				var score = prompt("Enter Your Score....");
+				if(score>50){
+					alert("You are Passed");
+					}
+					else{
+						alert("Try Again");
+						}
+				}
+				
+			//Q20
+			function questionTwenty(){
+				var number_1;
+				var number_2;
+
+				number_1 = prompt("Enter First Number");
+				number_2 = prompt("Enter Second Number");
+
+				//alert("Number One is : " + number_1 + " Number Two is : " + number_2);
+
+				if(number_1>number_2){
+					alert("First Number is Greater than Second Number : "+number_1);
+					}
+				else{
+					alert("Second Number is Greater than First Number : "+number_2);
+					}
+				}
+				
+			//Q21	
+			function questionTwentyOne(){
+				var language = prompt("Enter Language Name....");
+				if(language == "Dutch"){
+					alert("HALLO WERELD");
+				}
+				else if(language == "Russian"){
+					alert("ПРИВЕТ МИР");
+					}
+				else if(language == "Spanish"){
+					alert("HOLA MUNDO");
+					}
+				else{
+					alert("Hello World")
+					}
+					}
+				
+			//Q22	
+			function questionTwentyTwo(){
+				var number = prompt("Enter Number....");
+				if(number>=0){
+					alert("Positive");
+					}
+				else{
+					alert("Negative");
+					}
+				}
+			
+			//Q23	
+			function questionTwentyThree(){
+				var noun = prompt("Enter Noun....")
+				var number = prompt("Enter Number of Noun....");
+				if(number>1){
+					alert(number + " " + noun + "s");
+					}
+				else{
+					alert(number + " " + noun);
+					}
+				}
+
+        </script>
+        <style>
+        	
+			h1{
+				text-align:center;
+				text-decoration:underline;
+				margin-top:100px;
+				}
+				
+			.questions{
+				width:20%;
+				height:5%;
+				font-size:20px;
+				margin:15px;
+				cursor:pointer;
+				}
+				
+			.questions:hover{
+				background-color:#333;
+				color:#FFF;
+				font-weight:bold;
+				border-radius:10px;
+				}
+			
+        </style>
+    </head>
+    <body>
+    	
+        
+        <h1>ASSIGNMENT 3</h1>
+    
+    	<center>
+    		<button class="questions" onClick="questionOne();">Question 1</button>
+        	<button class="questions" onClick="questionTwo();">Question 2</button>
+        	<button class="questions" onClick="questionThree();">Question 3</button>
+        	<button class="questions" onClick="questionFour();">Question 4</button>
+        	<button class="questions" onClick="questionFive();">Question 5</button>
+        	<button class="questions" onClick="questionSix();">Question 6</button>
+        	<button class="questions" onClick="questionSeven();">Question 7</button>
+        	<button class="questions" onClick="questionEightA();">Question 8A</button>
+            <button class="questions" onClick="questionEightB();">Question 8B</button>
+            <button class="questions" onClick="questionEightC();">Question 8C</button>
+            <button class="questions" onClick="questionEightD();">Question 8D</button>
+            <button class="questions" onClick="questionEightE();">Question 8E</button>
+            <button class="questions" onClick="questionEightF();">Question 8F</button>
+        	<button class="questions" onClick="questionNine();">Question 9</button>
+        	<button class="questions" onClick="questionTen();">Question 10</button>
+        	<button class="questions" onClick="questionEleven();">Question 11</button>
+        	<button class="questions" onClick="questionTwelve();">Question 12</button>
+        	<button class="questions" onClick="questionThirteen();">Question 13</button>
+        	<button class="questions" onClick="questionFourteen();">Question 14</button>
+        	<button class="questions" onClick="questionFifteen();">Question 15</button>
+        	<button class="questions" onClick="questionSixteen();">Question 16</button>
+        	<button class="questions" onClick="questionSeventeen();">Question 17</button>
+        	<button class="questions" onClick="questionEighteen();">Question 18</button>
+        	<button class="questions" onClick="questionNineteen();">Question 19</button>
+        	<button class="questions" onClick="questionTwenty();">Question 20</button>
+            <button class="questions" onClick="questionTwentyOne();">Question 21</button>
+            <button class="questions" onClick="questionTwentyTwo();">Question 22</button>
+            <button class="questions" onClick="questionTwentyThree();">Question 23</button>
+       </center>
+    </body>
+</html>

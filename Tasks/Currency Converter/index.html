@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Currency Converter</title>
+	<style type="text/css">
+		.fields{
+			width: 200px;
+			height: 50px;
+			font-weight: bold;
+			font-size: 20px;
+			border-radius: 5px;
+			margin-top: 5px;
+		}
+
+		label{
+			font-weight: bold;
+			font-size: 22px;
+		}
+	</style>
+</head>
+<body>
+
+<label>USD</label>
+<br>
+<input type="number" id="txtDollar" placeholder="Enter In Dollars....." oninput="convertDollarToRupees()" onchange="convertDollarToRupees()" class="fields">
+<br>
+<label>PKR</label>
+<br>
+<input type="number" id="txtRupees" placeholder="Enter In Rupees....." oninput="convertRupeesToDollar()" onchange="convertRupeesToDollar()" class="fields">
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+Assignment 19 Part 4
+
+Q1) window.location.href;
+Ans : Return the current url (i.e: https://www.google.com/).
+
+
+Q2) window.location.hostname;
+Ans: Return only hostname of current url (i.e: www.google.com).
+
+
+Q3) window.location.pathname;
+Ans: Consider Url : https://www.google.com/abc.images.png.
+Return only pathname of current url (i.e: abc.images.png).
+
+Q4) window.location.hash;
+Ans: Consider Url : https://www.google.com/abc.images.png#mj
+Return After # (i.e: mj).
+
+Q5) window.location.assign;
+Ans: For redirect (i.e: window.location.assign("https://www.fb.com")).
+Redirect to facbook.
+
+Q6) window.location.replace;
+Ans: For redirect but when u click on back in browser it will redirect u on first url not on recent url which is replaced.
+Current Url : https://www.google.com -------> Search ----------------> hello world ------------->  https://www.google.com/helloworld
+Now,
+window.location.replace("http:www.fb.com");
+Now, when we click on back it will redirect you to first url : https://www.google.com
+
+Q7-A) window.location.reload(true); 
+Ans: Reload the page. But when the parameter is 'true' then its reload whole server.
+
+Q7-A)window.location.reload(false);
+Ans: Reload the page. But when the parameter is 'false' then its reload from cache.
+
+Q7-A)window.location.reload();
+Ans: Reload the page.
+
+Q8-A) history.back();
+Ans: For back window  <=.
+
+Q8-A)history.forward();
+Ans: For forward window =>.
+
+Q8-A)history.go(2);
+Ans : For forward window but jumps forword over 1 window.
+
+Q8-A)history.go(-3);
+Ans : For back window but jumps back over 1 window.
+
+Q9) document.referrer;
+Ans: Return the reference url of the previous window where you click and visited the current window.
+
+Q10) window.open();
+Ans: Open a new blank tab.
+
+Q11) var monkeyWindow = window.open();
+monkeyWindow.document.write("<h1> Hello World </h1>");
+setTimeout(function(){ monkeyWindow.close() }, 5000);
+Ans: Open a new tab and in this tab you can see hello world because we write hello world in above code
+then current tab is close in 5 seconds because we use setTimeOut function thats takes 2 parameters
+first one window.close() for closing window and second is time in miliseconds.
+
+Q12) window.open("monk.html", "win1", "width=420,height=380");
+Ans: Open a new window like '_self' with 420x380 size. 

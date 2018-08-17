@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.vid{
+  position: absolute;
+  width: 100vw;
+}
+
+.login{
+  background-color: #FFFFFF96;
+  position: absolute;
+  top: calc(50vh - 200px);
+  left: calc(50vw - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+form{
+ margin: 50px 50px;
+}
+
+input{
+  padding: 10px 0;
+  margin-top: 10px;
+  background-color: #FFF;
+  outline: none;
+  border: 0px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.btn{
+  background-color: grey;
+  font-size: 16px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
